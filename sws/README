@@ -1,0 +1,5 @@
+sudo apt-get update
+curl -sSL https://get.docker.com/ | sh
+git clone https://benpetro:k1llerbee@github.com/bthree/docker.git
+sudo docker build --tag="bthree/sws:0.1" docker/sws
+sudo docker run -p 80:80 bthree/sws:0.1
