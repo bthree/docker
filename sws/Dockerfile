@@ -26,7 +26,7 @@ RUN mkdir -p /etc/my_init.d
 ADD container_startup.sh /etc/my_init.d/startup.sh
 RUN chmod +x /etc/my_init.d/startup.sh
 
-RUN git clone https://benpetro:k1llerbee@github.com/bthree/sws.git /app
+RUN git clone https://benpetro:k1llerbee@github.com/bthree/sws.git -b system-admin-authentication /app
 
 RUN cd /app/lms && bundle update
 
