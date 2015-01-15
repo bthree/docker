@@ -27,7 +27,7 @@ ADD container_startup.sh /etc/my_init.d/startup.sh
 RUN chmod +x /etc/my_init.d/startup.sh
 
 #SKIP THIS STEP AND BRING IN SOURCE FROM HOST
-#RUN git clone https://benpetro:k1llerbee@github.com/bthree/sws.git /home/sites
+RUN git clone https://benpetro:k1llerbee@github.com/bthree/sws.git /app
 
 #RUN cd /home/sites/lms && bundle update
 RUN cd /app/lms && bundle update
