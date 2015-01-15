@@ -29,7 +29,8 @@ RUN chmod +x /etc/my_init.d/startup.sh
 #SKIP THIS STEP AND BRING IN SOURCE FROM HOST
 #RUN git clone https://benpetro:k1llerbee@github.com/bthree/sws.git /home/sites
 
-RUN cd /home/sites/lms && bundle update
+#RUN cd /home/sites/lms && bundle update
+RUN cd /app/lms && bundle update
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
