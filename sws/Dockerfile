@@ -20,6 +20,7 @@ RUN /build/ruby2.1.sh
 RUN rm -f /etc/service/nginx/down
 ADD sites.conf /etc/nginx/sites-enabled/sites.conf
 ADD nginx.conf /etc/nginx/conf.d/nginx.conf
+ADD mongo-env.conf /etc/nginx/main.d/mongo-env.conf
 
 #my startup script
 RUN mkdir -p /etc/my_init.d

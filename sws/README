@@ -1,7 +1,7 @@
 # Setup Host Environment
 sudo apt-get update
 curl -sSL https://get.docker.com/ | sh
-git clone https://benpetro:k1llerbee@github.com/bthree/docker.git
+git clone https://benpetro:k1llerbee@github.com/bthree/docker.git -b dev-workflow
 git clone https://benpetro:k1llerbee@github.com/bthree/sws.git -b system-admin-authentication
 
 # Setup Mongo Container - see: https://registry.hub.docker.com/u/dockerfile/mongodb/
@@ -10,7 +10,7 @@ docker run -d -p 27017:27017 --name mongodb dockerfile/mongodb
 
 # Setup App Container
 sudo docker build --tag="bthree/sws:0.1" docker/sws
-sudo docker run -p :80:80 -v $HOME/sws:/app bthree/sws:0.1
+sudo docker run -p :80:80 -v $HOME/sws:/app --link mongodb:db bthree/sws:0.1
 
 	#USE THE BELOW TO START THE CONTAINER AND HAVE ACCESS - NOT /app/bin/start-server will not execute
 	# See - http://learningdocker.com/wp-content/plugins/really-static/static/developing-with-docker-containers/ 
