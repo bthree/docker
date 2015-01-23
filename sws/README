@@ -5,8 +5,8 @@ git clone https://benpetro:k1llerbee@github.com/bthree/docker.git -b dev-workflo
 git clone https://benpetro:k1llerbee@github.com/bthree/sws.git -b system-admin-authentication
 
 # Setup Mongo Container - see: https://registry.hub.docker.com/u/dockerfile/mongodb/
-docker pull dockerfile/mongodb
-docker run -d -p 27017:27017 --name mongodb dockerfile/mongodb
+sudo docker pull dockerfile/mongodb
+sudo docker run -d -p 27017:27017 --name mongodb dockerfile/mongodb
 
 # Setup App Container
 sudo docker build --tag="bthree/sws:0.1" docker/sws
