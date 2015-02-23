@@ -8,8 +8,8 @@ sudo curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s
 NB: to restart docker = sudo service docker restart
 
 
-git clone https://benpetro:k1llerbee@github.com/bthree/docker.git -b dev-workflow
-git clone https://benpetro:k1llerbee@github.com/bthree/sws.git -b system-admin-authentication
+git clone https://benpetro:k1llerbee@github.com/bthree/docker.git
+git clone https://benpetro:k1llerbee@github.com/bthree/sws.git
 
 fig run web
 
