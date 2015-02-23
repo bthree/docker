@@ -1,8 +1,21 @@
 # Setup Host Environment
 sudo apt-get update
 curl -sSL https://get.docker.com/ | sh
+sudo chmod 777 /usr/local/bin 
+sudo curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`uname -m` > /usr/local/bin/fig; chmod +x /usr/local/bin/fig
+
+# Then need Implement the steps "RuslanHamidullin commented on Aug 8, 2014" from here https://github.com/docker/fig/issues/88#issuecomment-51583724
+NB: to restart docker = sudo service docker restart
+
+
 git clone https://benpetro:k1llerbee@github.com/bthree/docker.git -b dev-workflow
 git clone https://benpetro:k1llerbee@github.com/bthree/sws.git -b system-admin-authentication
+
+fig run web
+
+
+
+
 
 # Setup Mongo Container - see: https://registry.hub.docker.com/u/dockerfile/mongodb/
 sudo docker pull dockerfile/mongodb
